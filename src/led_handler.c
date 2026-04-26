@@ -3,7 +3,7 @@
 
 const uint LED_PIN = 25;
 
-void initialize() {
+void init_led() {
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
 }

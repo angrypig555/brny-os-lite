@@ -37,7 +37,10 @@ pico_sdk_init()
 
 add_executable(brny-os-lite src/brny-os-lite.c
     src/init.c
-    src/led_handler.c )
+    src/led_handler.c
+    src/sensors.c
+    src/console.c
+    src/os_utils.c )
 
 pico_set_program_name(brny-os-lite "brny-os-lite")
 pico_set_program_version(brny-os-lite "0.1")
@@ -48,7 +51,8 @@ pico_enable_stdio_usb(brny-os-lite 1)
 
 # Add the standard library to the build
 target_link_libraries(brny-os-lite
-        pico_stdlib)
+        pico_stdlib
+        hardware_adc)
 
 # Add the standard include files to the build
 target_include_directories(brny-os-lite PRIVATE
