@@ -40,7 +40,8 @@ add_executable(brny-os-lite src/brny-os-lite.c
     src/led_handler.c
     src/sensors.c
     src/console.c
-    src/os_utils.c )
+    src/os_utils.c
+    src/bsh.c )
 
 pico_set_program_name(brny-os-lite "brny-os-lite")
 pico_set_program_version(brny-os-lite "0.1")

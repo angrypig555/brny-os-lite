@@ -3,6 +3,7 @@
 #include "led_handler.h"
 #include "console.h"
 #include "sensors.h"
+#include "bsh.h"
 
 int init() {
     print("(init) init started\n");
@@ -24,5 +25,6 @@ int init() {
         return -1;
     }
     print("(init) finished, launching user program\n");
+    shell();
     return 0;
 }
